@@ -1,0 +1,39 @@
+name: Run CI/CD pipline
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Dev: null
+  name: Dev
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with: python-version: "3.12"
+    - name: Run dev script
+      run: python Dev.py
+Test:
+  name: Test
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with: python-version: "3.12"
+    - name: Run dev script
+      run: python Dev.py
+Prod:
+  name: Prod
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with: python-version: "3.12"
+    - name: Run dev script
+      run: python Prod.py
