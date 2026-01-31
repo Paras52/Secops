@@ -5,7 +5,7 @@ on:
     branches:
       - main
 jobs:
-  Dev:
+   dev:
     name: Dev
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +17,8 @@ jobs:
           python-version: "3.12"
       - name: Run dev script
         run: python Dev.py
-Test:
+        
+test:
   name: Test
   runs-on: ubuntu-latest
   steps:
@@ -27,9 +28,9 @@ Test:
       uses: actions/setup-python@v5
       with:
         python-version: "3.12"
-    - name: Run dev script
+    - name: Run test script
       run: python Test.py
-Prod:
+prod:
   name: Prod
   runs-on: ubuntu-latest
   steps:
@@ -39,5 +40,5 @@ Prod:
       uses: actions/setup-python@v5
       with:
         python-version: "3.12"
-    - name: Run dev script
+    - name: Run prod script
       run: python Prod.py
