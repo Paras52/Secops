@@ -27,7 +27,7 @@ Test:
       with: 
           python-version: "3.12"
     - name: Run dev script
-      run: python Dev.py
+      run: python Test.py
 Prod:
   name: Prod
   runs-on: ubuntu-latest
